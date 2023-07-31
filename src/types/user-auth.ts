@@ -121,9 +121,9 @@
 //   code: string;
 // };
 
-// export type AuthRequestResult = {
-//   user?: CognitoUser | null;
-//   success: boolean;
-//   message?: string;
-//   errorMessage?: string;
-// };
+export type AuthRequestResult = {
+  user?: string | null;
+  success: boolean;
+  message?: string;
+  errorMessage?: string;
+};
