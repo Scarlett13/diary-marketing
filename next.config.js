@@ -7,6 +7,9 @@ const nextConfig = {
   reactStrictMode: true,
   pageExtensions: ['page.tsx', 'api.ts'],
   swcMinify: true,
+  images: {
+    unoptimized: true,
+  },
 
   // Uncoment to add domain whitelist
   // images: {
