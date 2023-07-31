@@ -1,5 +1,6 @@
 import { Info } from 'lucide-react';
 import * as React from 'react';
+import { IconType } from 'react-icons';
 
 import clsxm from '@/lib/clsxm';
 
@@ -35,7 +36,7 @@ export default function InfoPopover({
             'rounded-full text-typo-icons',
             classNames?.trigger,
           ])}
-          icon={Info}
+          icon={Info as IconType}
         />
       </PopoverTrigger>
       <PopoverContent

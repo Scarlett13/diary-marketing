@@ -1,4 +1,4 @@
-import { DashboardConfig } from '@src/types';
+import { DashboardConfig } from '@/types';
 
 export const dashboardConfig: DashboardConfig = {
   mainNav: [
