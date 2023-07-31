@@ -1,5 +1,6 @@
+//ts-ignore
 import {
-  type Icon as LucideIcon,
+  // type Icon as LucideIcon,
   AlertTriangle,
   ArrowRight,
   BellDot,
@@ -35,7 +36,7 @@ import {
   X,
 } from 'lucide-react';
 
-export type Icon = LucideIcon;
+// export type Icon = LucideIcon;
 
 export const Icons = {
   logo: BookLock,
