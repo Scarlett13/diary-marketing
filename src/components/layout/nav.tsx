@@ -5,20 +5,20 @@ import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { FormProvider, useForm } from 'react-hook-form';
 
-import logger from '@src/lib/logger';
-import { clsxm } from '@src/lib/utils';
+import clsxm from '@/lib/clsxm';
+import logger from '@/lib/logger';
 
-import DatePicker from '@src/components/forms/DatePicker';
-import { Icons } from '@src/components/icons';
+import DatePicker from '@/components/forms/DatePicker';
+import { Icons } from '@/components/icons';
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from '@src/components/Tooltip';
-import Typography from '@src/components/typography/Typography';
+} from '@/components/Tooltip';
+import Typography from '@/components/typography/Typography';
 
-import { CustomSidebarNavItem, SidebarNavItem } from '@src/types';
+import { CustomSidebarNavItem, SidebarNavItem } from '@/types';
 
 interface DashboardNavProps {
   items: CustomSidebarNavItem[];

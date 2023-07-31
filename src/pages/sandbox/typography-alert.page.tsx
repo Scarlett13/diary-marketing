@@ -1,5 +1,6 @@
 import { AlertTriangle, AtSign } from 'lucide-react';
 import * as React from 'react';
+import { IconType } from 'react-icons';
 
 import TypographyAlert from '@/components/alert/TypographyAlert';
 import Layout from '@/components/layout/Layout';
@@ -26,7 +27,10 @@ export default function TypographyAlertPage() {
                 <li>Hi</li>
               </ul>
             </TypographyAlert>
-            <TypographyAlert variant='secondary' leftIcon={AlertTriangle}>
+            <TypographyAlert
+              variant='secondary'
+              leftIcon={AlertTriangle as IconType}
+            >
               <p>Hello</p>
               <ul>
                 <li>Hi</li>
@@ -42,7 +46,7 @@ export default function TypographyAlertPage() {
                 <li>Hi</li>
               </ul>
             </TypographyAlert>
-            <TypographyAlert variant='warning' leftIcon={AtSign}>
+            <TypographyAlert variant='warning' leftIcon={AtSign as IconType}>
               <p>Contact Us</p>
               <p>
                 Contact us on{' '}

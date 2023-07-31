@@ -1,5 +1,6 @@
 import { Info, Trash2 } from 'lucide-react';
 import * as React from 'react';
+import { IconType } from 'react-icons';
 
 import Layout from '@/components/layout/Layout';
 import Seo from '@/components/Seo';
@@ -19,11 +20,11 @@ export default function TagPage() {
             </Typography>
 
             <Tag>Default</Tag>
-            <Tag color='primary' leftIcon={Info}>
+            <Tag color='primary' leftIcon={Info as IconType}>
               Primary
             </Tag>
             <Tag color='secondary'>Secondary</Tag>
-            <Tag color='danger' rightIcon={Trash2}>
+            <Tag color='danger' rightIcon={Trash2 as IconType}>
               Danger
             </Tag>
             <Tag color='orange'>Orange</Tag>
