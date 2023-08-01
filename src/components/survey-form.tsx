@@ -21,7 +21,7 @@ const SurveyFormFields: FormFields[] = [
     type: 'text',
     autoComplete: 'referral_code',
     isRequired: false,
-    placeholder: 'Masukkan kode referral jika ada',
+    placeholder: 'Dari mana anda tahu Project Diary?',
     titlekey: 'title_referral_code',
   },
 ];
@@ -72,18 +72,19 @@ export default function SurveyForm() {
   }, [value]);
 
   useEffect(() => {
-    if (!valid) {
-      setError('referral_code', {
-        message:
-          'Referral code tidak valid, silahkan masukkan referral code lain atau biarkan kosong!',
-        type: 'custom',
-      });
+    // if (!valid) {
+    //   setError('referral_code', {
+    //     message:
+    //       'Referral code tidak valid, silahkan masukkan referral code lain atau biarkan kosong!',
+    //     type: 'custom',
+    //   });
 
-      return;
-    } else {
-      clearErrors('referral_code');
-      return;
-    }
+    //   return;
+    // } else {
+    //   clearErrors('referral_code');
+    //   return;
+    // }
+    logger(valid);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [valid]);
 
@@ -98,7 +99,7 @@ export default function SurveyForm() {
     router.push(`/survey/early-surveys?rc=${rc}`);
   }
 
-  const { handleSubmit, setError, clearErrors } = methods;
+  const { handleSubmit } = methods;
 
   return (
     <div className='grid-col grid items-center py-4 md:flex md:flex-row md:justify-center md:gap-x-4'>
