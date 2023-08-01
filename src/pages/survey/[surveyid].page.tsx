@@ -28,7 +28,10 @@ export default function EmbedSurveyFormPage() {
 
   return (
     <Layout>
-      <Seo templateTitle='Survey Diary' date={Date()} />
+      <Seo
+        templateTitle={`${formData.title ?? 'Survey Diary'}`}
+        date={Date()}
+      />
       <div className='flex min-w-full flex-col items-center text-black'>
         <header className='z-40 hidden min-w-full flex-col items-center bg-white md:flex'>
           <div className='mx-8 flex h-20 items-center justify-between py-6 md:mx-10 lg:mx-12'>

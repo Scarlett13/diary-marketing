@@ -38,6 +38,7 @@
     "lodash.get": "^4.4.2",
     "lucide-react": "^0.263.1",
     "next": "^13.1.6",
+    "nextjs-google-analytics": "^2.3.3",
     "nprogress": "^0.2.0",
     "query-string": "^8.1.0",
     "react": "^18.2.0",
