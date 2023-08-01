@@ -92,8 +92,7 @@ export default function SurveyForm() {
   });
 
   async function onSubmit(data: SurveyFormType) {
-    logger({ data });
-
+    // logger({ data });
     const rc = !data.referral_code ? 'norfc' : data.referral_code;
 
     router.push(`/survey/early-surveys?rc=${rc}`);

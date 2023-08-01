@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Widget } from '@typeform/embed-react';
-import { InferGetServerSidePropsType } from 'next';
+import { useRouter } from 'next/router';
 
 import Layout from '@/components/layout/Layout';
 import { MainNav } from '@/components/layout/main-nav';
@@ -10,26 +10,25 @@ import Seo from '@/components/Seo';
 import { dashboardConfig } from '@/config/dashboard';
 import { getLocalSurveyId } from '@/config/surveys-config';
 
-export async function getServerSideProps(context: any) {
-  const data = getLocalSurveyId(context.query.surveyid);
-  const referralcode = context.query.rc;
+import NotFoundPage from '../404.page';
 
-  const repo = { data: data, referralcode: referralcode ?? 'not-found' };
+export default function EmbedSurveyFormPage() {
+  const router = useRouter();
+  const { surveyid, rc } = router.query;
 
-  if (!repo.data.success || !repo.data.formId) {
-    return {
-      notFound: true,
-    };
+  if (!surveyid) {
+    return <NotFoundPage></NotFoundPage>;
   }
-  return { props: { repo } };
-}
 
-export default function EmbedSurveyForm({
-  repo,
-}: InferGetServerSidePropsType<typeof getServerSideProps>) {
+  const formData = getLocalSurveyId(surveyid as string);
+
+  if (!formData.success) {
+    return <NotFoundPage></NotFoundPage>;
+  }
+
   return (
     <Layout>
-      <Seo templateTitle={repo.data.title ?? 'Survey Diary'} date={Date()} />
+      <Seo templateTitle='Survey Diary' date={Date()} />
       <div className='flex min-w-full flex-col items-center text-black'>
         <header className='z-40 hidden min-w-full flex-col items-center bg-white md:flex'>
           <div className='mx-8 flex h-20 items-center justify-between py-6 md:mx-10 lg:mx-12'>
@@ -48,12 +47,12 @@ export default function EmbedSurveyForm({
         </header>
         <div className='w-full'>
           <Widget
-            id={repo.data.formId ?? 'not-found'}
+            id={formData.formId ?? 'not-found'}
             medium='diary-surveys'
             className='h-screen md:-mb-14 md:-mt-20'
-            hidden={{ referralcode: repo.referralcode }}
+            hidden={{ referralcode: rc as string }}
             transitiveSearchParams={['referralcode']}
-            iframeProps={{ title: repo.data.title ?? 'not-found' }}
+            iframeProps={{ title: formData.title ?? 'not-found' }}
           />
         </div>
         <SiteFooter className='z-40 mt-2 hidden border-t text-black md:flex' />
@@ -69,9 +68,16 @@ export default function EmbedSurveyForm({
 // };
 
 // export async function getServerSideProps(context: any) {
-//   const formId = getLocalSurveyId(context.query.surveyid);
+//   const data = getLocalSurveyId(context.query.surveyid);
+//   const referralcode = context.query.rc;
 
-//   const repo = { surveys: 'asd', referralcode: 'sdf' };
+//   const repo = { data: data, referralcode: referralcode ?? 'not-found' };
+
+//   if (!repo.data.success || !repo.data.formId) {
+//     return {
+//       notFound: true,
+//     };
+//   }
 //   return { props: { repo } };
 // }
 
