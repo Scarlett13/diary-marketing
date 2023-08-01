@@ -5,6 +5,7 @@ import {
 } from '@tanstack/react-query';
 import { AppProps } from 'next/app';
 import Router from 'next/router';
+import { GoogleAnalytics } from 'nextjs-google-analytics';
 import nProgress from 'nprogress';
 
 import '@/styles/nprogress.css';
@@ -33,12 +34,15 @@ const queryClient = new QueryClient({
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <QueryClientProvider client={queryClient}>
-      <div>
-        <DismissableToast />
-        <Component {...pageProps} />
-      </div>
-    </QueryClientProvider>
+    <>
+      <GoogleAnalytics trackPageViews />
+      <QueryClientProvider client={queryClient}>
+        <div>
+          <DismissableToast />
+          <Component {...pageProps} />
+        </div>
+      </QueryClientProvider>
+    </>
   );
 }
 
