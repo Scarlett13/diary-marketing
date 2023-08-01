@@ -1,9 +1,6 @@
 'use client';
 
-import { useSelectedLayoutSegment } from 'next/navigation';
 import * as React from 'react';
-
-import clsxm from '@/lib/clsxm';
 
 import { Icons } from '@/components/icons';
 import UnstyledLink from '@/components/links/UnstyledLink';
@@ -26,12 +23,9 @@ export function MainNav({ items, children }: MainNavProps) {
 
   return (
     <div className='flex gap-6 md:gap-10'>
-      <UnstyledLink
-        href='/'
-        className='hidden items-center space-x-2 text-white md:flex'
-      >
+      <UnstyledLink href='/' className='hidden items-center space-x-2  md:flex'>
         <Icons.logo />
-        <span className=' hidden text-xl font-bold sm:inline-block'>
+        <span className='hidden text-xl font-bold sm:inline-block'>
           {siteConfig.name}
         </span>
       </UnstyledLink>
