@@ -7,8 +7,7 @@ const defaultMeta = {
   title: 'Landing Page',
   siteName: 'Project Diary',
   description: 'Collaborative journaling never been easier',
-  /** Without additional '/' on the end, e.g. https://theodorusclarence.com */
-  url: 'https://marketing.projectdiary.id',
+  url: 'https://projectdiary.id',
   type: 'website',
   robots: 'follow, index',
   /**
