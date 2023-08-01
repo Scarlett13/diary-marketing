@@ -27,6 +27,8 @@
     "@tanstack/react-query": "^4.24.10",
     "@tanstack/react-query-devtools": "^4.24.4",
     "@tanstack/react-table": "^8.7.9",
+    "@typeform/embed": "^2.16.0",
+    "@typeform/embed-react": "^2.30.0",
     "auto-zustand-selectors-hook": "^2.0.0",
     "axios": "1.2.1",
     "class-variance-authority": "^0.7.0",

@@ -81,3 +81,9 @@ export type UserSubscriptionPlan = SubscriptionPlan &
     stripeCurrentPeriodEnd: number;
     isPro: boolean;
   };
+
+export type SurveyFormProps = {
+  success: boolean;
+  formId?: string;
+  title?: string;
+};

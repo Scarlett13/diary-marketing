@@ -94,8 +94,9 @@ export default function SurveyForm() {
   async function onSubmit(data: SurveyFormType) {
     logger({ data });
 
-    router.refresh();
-    router.push('/dashboard');
+    const rc = !data.referral_code ? 'norfc' : data.referral_code;
+
+    router.push(`/survey/early-surveys?rc=${rc}`);
   }
 
   const { handleSubmit, setError, clearErrors } = methods;
@@ -127,6 +128,7 @@ export default function SurveyForm() {
         type='submit'
         className='mb-4 border bg-primary-500 text-center shadow-sm md:mb-0 md:w-2/5'
         disabled={loading}
+        onClick={handleSubmit(onSubmit)}
       >
         Isi survey
       </Button>
