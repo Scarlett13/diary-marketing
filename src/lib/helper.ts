@@ -8,7 +8,7 @@ export function openGraph({
   siteName,
   templateTitle,
   description,
-  logo = 'https://ppdbsulsel.net/images/logo-sulsel.png',
+  logo = 'https://public-diary-assets.s3.ap-southeast-3.amazonaws.com/diary_logo.png',
 }: OpenGraphType): string {
   const ogLogo = encodeURIComponent(logo);
   const ogSiteName = encodeURIComponent(siteName.trim());
@@ -17,7 +17,7 @@ export function openGraph({
     : undefined;
   const ogDesc = encodeURIComponent(description.trim());
 
-  return `https://og.ppdbdemo.net/api/general?siteName=${ogSiteName}&description=${ogDesc}&logo=${ogLogo}&theme=light${
+  return `https://opengraph.projectdiary.id/api/general?siteName=${ogSiteName}&description=${ogDesc}&logo=${ogLogo}&theme=light${
     ogTemplateTitle ? `&templateTitle=${ogTemplateTitle}` : ''
   }`;
 }

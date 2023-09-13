@@ -4,9 +4,10 @@ import { useRouter } from 'next/router';
 import { openGraph } from '@/lib/helper';
 
 const defaultMeta = {
-  title: 'Landing Page',
+  title: 'Buku Penghubung by Project Diary',
   siteName: 'Project Diary',
-  description: 'Collaborative journaling never been easier',
+  description:
+    'Buku Penghubung dari ProjectDiary. Solusi terbaik untuk menghubungkan siswa, orang tua, dan guru melalui satu platform terintegrasi dan aman.',
   url: 'https://projectdiary.id',
   type: 'website',
   robots: 'follow, index',
