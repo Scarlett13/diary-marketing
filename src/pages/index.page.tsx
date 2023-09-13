@@ -12,7 +12,7 @@ import { dashboardConfig } from '@/config/dashboard';
 export default function HomePage() {
   return (
     <Layout>
-      <Seo templateTitle='Landing Page' date={Date()} />
+      <Seo date={Date()} />
       <div className='flex min-w-full flex-col items-center text-white'>
         <header className='z-40 flex min-w-full flex-col items-center bg-firsthero'>
           <div className='mx-8 flex h-20 items-center justify-between py-6 md:mx-10 lg:mx-12'>

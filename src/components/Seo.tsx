@@ -4,9 +4,10 @@ import { useRouter } from 'next/router';
 import { openGraph } from '@/lib/helper';
 
 const defaultMeta = {
-  title: 'Landing Page',
+  title: 'Buku Penghubung by Project Diary',
   siteName: 'Project Diary',
-  description: 'Collaborative journaling never been easier',
+  description:
+    'Buku Penghubung dari ProjectDiary. Solusi terbaik untuk menghubungkan siswa, orang tua, dan guru melalui satu platform terintegrasi dan aman.',
   url: 'https://projectdiary.id',
   type: 'website',
   robots: 'follow, index',
@@ -14,7 +15,7 @@ const defaultMeta = {
    * No need to be filled, will be populated with openGraph function
    * If you wish to use a normal image, just specify the path below
    */
-  image: 'https://tsnext-tw.thcl.dev/images/large-og.png',
+  image: 'https://projectdiary.id/images/large-og.png',
 };
 
 type SeoProps = {
