@@ -57,6 +57,11 @@ module.exports = {
         light: '#F5F5F5',
         firsthero: '#8d99ae',
         secondhero: '#2b2d42',
+        newsecondary: '#1c6094',
+        newprimary: '#ffe000',
+        newprimarybg: '#f18b8b',
+        newsecondarybg: '#fffef7',
+        newthirdbg: '#16ce9a',
       },
       keyframes: {
         flicker: {

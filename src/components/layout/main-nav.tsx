@@ -26,7 +26,9 @@ export function MainNav({ items, children }: MainNavProps) {
       <UnstyledLink href='/' className='hidden items-center space-x-2  md:flex'>
         <Icons.logo />
         <span className='hidden text-xl font-bold sm:inline-block'>
-          {siteConfig.name}
+          {`${siteConfig.header} ${siteConfig.header ? 'dari' : ''} ${
+            siteConfig.name
+          }`}
         </span>
       </UnstyledLink>
       {/* {items?.length ? (
