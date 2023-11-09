@@ -33,6 +33,7 @@ export type SidebarNavItem = {
 
 export type SiteConfig = {
   name: string;
+  header?: string;
   description: string;
   url: string;
   ogImage: string;

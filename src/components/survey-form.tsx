@@ -102,7 +102,7 @@ export default function SurveyForm() {
   const { handleSubmit } = methods;
 
   return (
-    <div className='grid-col grid items-center py-4 md:flex md:flex-row md:justify-center md:gap-x-4'>
+    <div className='grid-col grid items-center justify-center py-4 md:flex md:flex-row md:justify-center md:gap-x-4'>
       <FormProvider {...methods}>
         <form onSubmit={handleSubmit(onSubmit)} className='w-full md:w-2/4'>
           {SurveyFormFields.map((field) => {
@@ -126,7 +126,7 @@ export default function SurveyForm() {
       </FormProvider>
       <Button
         type='submit'
-        className='mb-4 border bg-primary-500 text-center shadow-sm md:mb-0 md:w-2/5'
+        className='mb-4 border text-center shadow-sm md:mb-0 md:w-2/5'
         disabled={loading}
         onClick={handleSubmit(onSubmit)}
       >
